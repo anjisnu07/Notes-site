@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>College Notes</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/tooplate-clean-work.css" rel="stylesheet">
+        
+       
+
+    </head>
+<style>
+
+.section-overlay{
+    background-image: url("https://raw.githubusercontent.com/anjisnu07/Cloud/main/Untitled%20design.jpg");
+}
+.cd-words-wrapper{
+    color: brown;
+}
+.button23 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button4 {background-color: #7a1c1c; color: black;}
+
+.row{
+    display: flexbox;
+    justify-content: center;
+    
+}
+.loader-container{
+  position: fixed;
+  top:0; left:0;
+  z-index: 10000;
+  background: slategrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  width:100%;
+}
+
+.loader-container.fade-out{
+  top:-120%;
+}
+
+.button--atlas > span {
+    display: inline-block;
+}
+
+
+/* footer */
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+#scroll-top{
+  position: fixed;
+  top:-120%;
+  right:2rem;
+  padding:.5rem 1.5rem;
+  font-size: 4rem;
+  background:var(--red);
+  color:black;
+  border-radius: .5rem;
+  transition: 1s linear;
+  z-index: 1000;
+  
+}
+
+#scroll-top.active{
+  top:calc(100% - 12rem)
+}
+
+.fo{
+    font-size: 16px;
+}
+ /* footer */
+.footer{
+  background:#f0f8ff;
+  text-align: center;
+}
+
+.footer .share{
+  display: flex;
+  gap:1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer .credit{
+  padding:2.5rem 1rem;
+  color:burlywood;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.footer .credit span{
+  color:var(--red);
+}
+.btn{
+  display: inline-block;
+  padding:.8rem 3rem;
+  border:.2rem solid var(--red);
+  color:var(--red);
+  cursor: pointer;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+}
+
+.btn::before{
+  content: '';
+  position: absolute;
+  top:0; right: 0;
+  width:0%;
+  height:100%;
+  background:var(--red);
+  transition: .3s linear;
+  z-index: -1;
+}
+
+.btn:hover::before{
+  width:100%;
+  left: 0;
+}
+
+.btn:hover{
+  color:#fff;
+}
+
+
+.broda {
+
+    text-align: center;
+            animation: blinker 1s linear infinite;
+            color: red;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    background: transparent;
+    color:darkblue;
+}
+</style>
+    <body>
+    <div id="hi">
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-12 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-house-fill me-2"></i>
+                            All class notes
+                        </p>
+
+                     
+
+                        <p class="site-header-icon-wrap text-white d-flex mb-0 ms-auto">
+                            <i class="site-header-icon bi-whatsapp me-2"></i>
+
+                            <a href="https://wa.me/qr/UYF7DRSTXCOBJ1" class="text-white">
+                                Tap Here to write us
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Present Sem materials</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a> &nbsp 
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+
+                            <li><a class="dropdown-item" href="#sample">ESA Sample</a></li>
+                                
+                                         
+                                <li><a class="dropdown-item" href="#notes">Notes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <main>
+
+            <section class="hero-section hero-section-full-height d-flex justify-content-center align-items-center">
+                
+                
+                
+                <div class="section-overlay"></div>
+                
+                <div class="container">
+                    <div class="broda">
+                        <h1> 3rd sem materials</a> </h1> 
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-lg-7 col-12 text-center mx-auto">
+                            <h1 class="cd-headline rotate-1 text-white mb-4 pb-2">
+                                <span> &nbsp Get Notes of</span><br>
+                                <span class="cd-words-wrapper">
+                                    <b class="is-visible">  &nbsp &nbsp   MATH</b>
+                                    
+                                    <b> &nbsp &nbsp &nbsp  DSA</b>
+                                    <b>&nbsp &nbsp &nbsp &nbsp  CO</b>
+                                    <b>&nbsp &nbsp &nbsp &nbsp   DE</b>
+                                </span>
+                            </h1>
+
+                       
+
+                          
+                        </div>
+
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L40,229.3C80,235,160,245,240,250.7C320,256,400,256,480,240C560,224,640,192,720,176C800,160,880,160,960,138.7C1040,117,1120,75,1200,80C1280,85,1360,139,1400,165.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+            </section>
+
+
+            <section class="intro-section" id="intro-section">
+                <div class="container">
+                    <div class="row justify-content-lg-center align-items-center">
+
+                         
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+                                            
+
+            <section class="services-section section-padding section-bg" id="notes">                
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <h2 class="mb-4">ALL AVAILABLE 
+                                <span>NOTES</span>
+
+                            </h2>
+                        </div>
+
+                                                <!-- Strats -->
+
+                        
+                        <div class="col-lg-6 col-12">
+                            <div class="services-thumb">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-12">
+                                        <div class="services-image-wrap">
+                                           
+                                                <img src="DSA.png" class="services-image img-fluid" alt="">
+                                                <img src="DSA.png" class="services-image services-image-hover img-fluid" alt="">          
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        
+                                                        <button class="button23 button4" type="button"><a href="dsapdf.html"> Preview </a></button>
+                                                            
+                                                        
+                                                                                        
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
+                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
+                                            <h4 class="services-title mb-1 mb-lg-2">
+                                                <a class="services-title-link" href="">DSA NOTES</a>
+                                            </h4>
+
+                                            <p><b>Contents:-></b>  Array,Linkedlist,Stack,Queue,Binary tree,Sorting</p>
+
+                                             
+                                                <div class="reviews-icons">
+                                                    <i class="bi-star-fill"></i>
+                                                    <i class="bi-star-fill"></i>
+                                                    <i class="bi-star-fill"></i>
+                                                    <i class="bi-star-fill"></i>
+                                                    <i class="bi-star-fill"></i>
+                                                </div>
+                                                <a href="https://drive.google.com/uc?export=download&id=15T7UVIiUZsmMEEkanp-5ZZ1c3w8RONva" class="custom-btn btn button button--atlas mt-2 ms-auto">
+                                                    <span><i class="bi bi-download"></i> &nbsp Download</span>
+
+                                                    <div class="marquee" aria-hidden="true">
+                                                        <div class="marquee__inner">
+                                                            <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                            <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                            <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                            <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                                                <!-- ends -->
+                        <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="services-thumb">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-12">
+                                        <div class="services-image-wrap">
+                                           
+                                                <img src="MATHS.jpeg" class="services-image img-fluid" alt="">
+                                                <img src="MATHS.jpeg" class="services-image services-image-hover img-fluid" alt="">          
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        
+                                                        <button class="button23 button4" type="button"><a href="mathpdf.html"> Preview </a></button>
+                                                            
+                                                        
+                                                                                        
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
+                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
+                                            <h4 class="services-title mb-1 mb-lg-2">
+                                                <a class="services-title-link" href="">MATH NOTES</a>
+                                            </h4>
+
+                                            <p><b>Contents:-></b> Upto Entire 3rd Sem</p>
+
+                                             
+                                                <div class="reviews-icons">
+                                                    <i class="bi-star-fill"></i>
+                                                    <i class="bi-star-fill"></i>
+                                                    <i class="bi-star-fill"></i>
+                                                    <i class="bi-star-fill"></i>
+                                                    <i class="bi-star-fill"></i>
+                                                </div>
+                                                <a href="https://drive.google.com/uc?export=download&id=16P3776rHIr92EaMdL4PKVS-Bey_i50l1" class="custom-btn btn button button--atlas mt-2 ms-auto">
+                                                    <span><i class="bi bi-download"></i> &nbsp Download</span>
+
+                                                    <div class="marquee" aria-hidden="true">
+                                                        <div class="marquee__inner">
+                                                            <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                            <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                            <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                            <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                                                <!-- Starts  -->
+
+
+                        <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="services-thumb">
+                                            <div class="row">
+                                                <div class="col-lg-5 col-md-5 col-12">
+                                                    <div class="services-image-wrap">
+                                                       
+                                                            <img src="DE.jpeg" class="services-image img-fluid" alt="">
+                                                            <img src="DE.jpeg" class="services-image services-image-hover img-fluid" alt="">          
+                                                                <div class="d-flex justify-content-between align-items-center">
+                                                                    
+                                                                    <button class="button23 button4" type="button"><a href="depdf.html"> Preview </a></button>
+                                                                        
+                                                                    
+                                                                                                    
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
+                                                    <div class="services-info mt-4 mt-lg-0 mt-md-0">
+                                                        <h4 class="services-title mb-1 mb-lg-2">
+                                                            <a class="services-title-link" href="">DE NOTES</a>
+                                                        </h4>
+            
+                                                        <p><b>Contents:-></b>Complete upto 3rd Sem</p>
+            
+                                                         
+                                                            <div class="reviews-icons">
+                                                                <i class="bi-star-fill"></i>
+                                                                <i class="bi-star-fill"></i>
+                                                                <i class="bi-star-fill"></i>
+                                                                <i class="bi-star-fill"></i>
+                                                                <i class="bi-star-fill"></i>
+                                                            </div>
+                                                            <a href="https://drive.google.com/uc?export=download&id=1mtri0x8ca04TKpehV65Rlnsh7ExscTWh" class="custom-btn btn button button--atlas mt-2 ms-auto">
+                                                                <span> <i class="bi bi-download"></i> &nbsp Download</span>
+            
+                                                                <div class="marquee" aria-hidden="true">
+                                                                    <div class="marquee__inner">
+                                                                        <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                                        <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                                        <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                                        <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                            <!-- Note CO  -->
+
+
+
+                                                                            <div class="row">
+                                                                                <div class="col-lg-6 col-12">
+                                                                                    <div class="services-thumb">
+                                                                                        <div class="row">
+                                                                                            <div class="col-lg-5 col-md-5 col-12">
+                                                                                                <div class="services-image-wrap">
+                                                                                                   
+                                                                                                        <img src="CO.png" class="services-image img-fluid" alt="">
+                                                                                                        <img src="CO.png" class="services-image services-image-hover img-fluid" alt="">          
+                                                                                                            <div class="d-flex justify-content-between align-items-center">
+                                                                                                                
+                                                                                                                <button class="button23 button4" type="button"><a href="copdf.html"> Preview </a></button>
+                                                                                                                    
+                                                                                                                
+                                                                                                                                                
+                                                                                                        </div>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </div>
+                                                        
+                                                                                            <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
+                                                                                                <div class="services-info mt-4 mt-lg-0 mt-md-0">
+                                                                                                    <h4 class="services-title mb-1 mb-lg-2">
+                                                                                                        <a class="services-title-link" href="">CO NOTES</a>
+                                                                                                    </h4>
+                                                        
+                                                                                                    <p><b>Contents:-></b>Complete upto 3rd Sem</p>
+                                                        
+                                                                                                     
+                                                                                                        <div class="reviews-icons">
+                                                                                                            <i class="bi-star-fill"></i>
+                                                                                                            <i class="bi-star-fill"></i>
+                                                                                                            <i class="bi-star-fill"></i>
+                                                                                                            <i class="bi-star-fill"></i>
+                                                                                                            <i class="bi-star-fill"></i>
+                                                                                                        </div>
+                                                                                                        <a href="https://drive.google.com/uc?export=download&id=1J66V18u74IuPuXIMMYer0-R_NcWgVIE1" class="custom-btn btn button button--atlas mt-2 ms-auto">
+                                                                                                            <span> <i class="bi bi-download"></i> &nbsp Download</span>
+                                                        
+                                                                                                            <div class="marquee" aria-hidden="true">
+                                                                                                                <div class="marquee__inner">
+                                                                                                                    <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                                                                                    <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                                                                                    <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                                                                                    <span><i class="bi bi-download"></i> &nbsp Download</span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                            
+
+                                    <!-- sample section -->
+
+                                    
+                                    <section class="services-section section-padding section-bg" id="sample">                
+                                        <div class="container">
+                                            <div class="row">
+                        
+                                                <div class="col-lg-12 col-12">
+                                                    <h2 class="mb-4">ALL AVAILABLE 
+                                                        <span>Samples</span>
+                        
+                                                    </h2>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-12">
+                                                        <div class="services-thumb">
+                                                            <div class="row">
+                                                                <div class="col-lg-5 col-md-5 col-12">
+                                                                    <div class="services-image-wrap">
+                                                                       
+                                                                            
+                                                                    
+                            
+                                                                <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
+                                                                    <div class="services-info mt-4 mt-lg-0 mt-md-0">
+                                                                        <h4 class="services-title mb-1 mb-lg-2">
+                                                                            <a class="services-title-link" >Math <span>Samples</span> </a>
+                                                                        </h4><br>
+                            
+                                                                    <b>
+                                                                        <div class="fo">  1.ESA sample(Mourani mam) </div><br></b>
+                                                                    <a href="https://drive.google.com/uc?export=download&id=1XMcIy3QvMfQb-OWuYtb6eEQtrXe9b3j3" >
+                                                                        <span> <i class="bi bi-download"></i> &nbsp Download</span> </a>   <br>                 
+
+                                                                    <b>
+                                                                    <br>
+                                                                    <div class="fo"> 
+                                                                    2.MTA sample(Mourani mam) </div></b> <br>
+
+                                                                    <a href="https://drive.google.com/uc?export=download&id=1bWHn4dI81ZdntowOPFyWajird80ENhWR" >
+                                                                        <span> <i class="bi bi-download"></i> &nbsp Download</span> </a>   <br>
+                            
+                                                                     <br><b> <div class="fo"> 3.MTA sample(Oshmita mam) </div>  </h10></b> <br>
+
+                                                                     <a href="https://drive.google.com/uc?export=download&id=1wvFp1M9B-ldchBekk4gQsvNZIMKx75H0" >
+                                                                            <span> <i class="bi bi-download"></i> &nbsp Download</span> </a>   <br>
+                                                                            
+                                                                            
+                            
+                                                                               
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+<!-- FROM HERE  -->
+
+<div class="n"><a href="#hi" class="fas fa-angle-up" id="scroll-top"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+</svg> </a></div>
+
+        
+      
+        
+
+      
+
+        <div class="loader-container">
+            <img src="study-gif-4.gif" alt="">
+        </div>
+
+        <script>
+        
+        window.onscroll = () =>{
+
+        if(window.scrollY > 60){
+             document.querySelector('#scroll-top').classList.add('active');
+        }else{
+             document.querySelector('#scroll-top').classList.remove('active');
+        }
+
+}
+
+
+        function loader(){
+          document.querySelector('.loader-container').classList.add('fade-out');
+        }
+        
+        function fadeOut(){
+          setInterval(loader, 3000);
+        }
+        
+        window.onload = fadeOut();
+        
+        
+        </script>
+
+        <!-- loader  -->
+        <!-- custom js file link  -->
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script> 
+        <!-- <script src="js/jquery.backstretch.min.js"></script> -->
+        <script src="js/counter.js"></script>
+        <script src="js/countdown.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/modernizr.js"></script>
+        <script src="js/animated-headline.js"></script>
+        <script src="js/custom.js"></script> 
+
+
+
+        <section class="footer">
+
+          
+        
+            <h10 class="credit"> <span> @anjishnuroy_07 </span>  </h10>
+        
+        </section>
+    </body>
+</html>
